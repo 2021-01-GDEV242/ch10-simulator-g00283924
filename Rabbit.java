@@ -1,15 +1,14 @@
 import java.util.List;
 import java.util.Random;
-
-/**
- * A simple model of a rabbit.
- * Rabbits age, move, breed, and die.
- * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29 (2)
- */
-public class Rabbit extends Animal
-{
+ /**
+  * A simple model of a rabbit.
+  * Rabbits age, move, breed, and die.
+   * 
+ 
+  * @version 2016.02.29 (2)
+  */
+    public class Rabbit extends Animal
+    {
     // Characteristics shared by all rabbits (class variables).
 
     // The age at which a rabbit can start to breed.
@@ -65,19 +64,7 @@ public class Rabbit extends Animal
             }
         }
     }
-
-    /**
-     * Increase the age.
-     * This could result in the rabbit's death.
-     */
-    private void incrementAge()
-    {
-        age++;
-        if(age > MAX_AGE) {
-            setDead();
-        }
-    }
-    
+      
     /**
      * Check whether or not this rabbit is to give birth at this step.
      * New births will be made into free adjacent locations.
@@ -114,5 +101,10 @@ public class Rabbit extends Animal
     public int getBreedingAge()
     {
         return BREEDING_AGE;
+    }
+    
+    public int getMaxAge()
+    {
+        return MAX_AGE;
     }
 }

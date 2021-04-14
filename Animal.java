@@ -104,5 +104,16 @@ public abstract class Animal
     public boolean canBreed()
     {
         return getAge() >= getBreedingAge();
-    } abstract public int getBreedingAge();
+    } 
+    
+    protected void incrementAge()
+    {
+     age++;
+     if(age>getMaxAge())
+     {
+      setDead();   
+        }
+    }
+    abstract public int getBreedingAge();
+    abstract public int getMaxAge();
 }

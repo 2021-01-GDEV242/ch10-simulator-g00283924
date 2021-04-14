@@ -83,28 +83,6 @@ public class Fox extends Animal
             }
         }
     }
-
-    /**
-     * Increase the age. This could result in the fox's death.
-     */
-    private void incrementAge()
-    {
-        age++;
-        if(age > MAX_AGE) {
-            setDead();
-        }
-    }
-    
-    /**
-     * Make this fox more hungry. This could result in the fox's death.
-     */
-    private void incrementHunger()
-    {
-        foodLevel--;
-        if(foodLevel <= 0) {
-            setDead();
-        }
-    }
     
     /**
      * Look for rabbits adjacent to the current location.
@@ -164,9 +142,24 @@ public class Fox extends Animal
         return births;
     }
     
+    /**
+     * Make this fox more hungry. This could result in the fox's death.
+     */
+    private void incrementHunger()
+    {
+        foodLevel--;
+        if(foodLevel <= 0) {
+            setDead();
+        }
+    }
+    
     public int getBreedingAge()
     {
         return BREEDING_AGE;
     }
     
+    public int getMaxAge()
+    {
+        return MAX_AGE;
+    }
 }
