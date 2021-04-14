@@ -24,9 +24,8 @@ public class Rabbit extends Animal
     private static final Random rand = Randomizer.getRandom();
     
     // Individual characteristics (instance fields).
-    
     // The rabbit's age.
-    private int age;
+    
 
     /**
      * Create a new rabbit. A rabbit may be created with age

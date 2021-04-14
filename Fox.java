@@ -29,7 +29,7 @@ public class Fox extends Animal
     
     // Individual characteristics (instance fields).
     // The fox's age.
-    private int age;
+   
     // The fox's food level, which is increased by eating rabbits.
     private int foodLevel;
 
