@@ -83,28 +83,24 @@ import java.util.Random;
             newRabbits.add(young);
         }
     }
-        
-    /**
-     * Generate a number representing the number of births,
-     * if it can breed.
-     * @return The number of births (may be zero).
-     */
-    private int breed()
-    {
-        int births = 0;
-        if(canBreed() && rand.nextDouble() <= BREEDING_PROBABILITY) {
-            births = rand.nextInt(MAX_LITTER_SIZE) + 1;
+   
+    public int getMaxLitterSize()
+        {
+         return MAX_LITTER_SIZE;   
         }
-        return births;
-    }
-    
-    public int getBreedingAge()
-    {
-        return BREEDING_AGE;
-    }
-    
+        
     public int getMaxAge()
-    {
-        return MAX_AGE;
-    }
+        {
+            return MAX_AGE;
+        }
+        
+    public int getBreedingAge()
+        {
+            return BREEDING_AGE;
+        }
+        
+    public double getBreedingProbability()
+        {
+            return BREEDING_PROBABILITY;
+        }
 }
